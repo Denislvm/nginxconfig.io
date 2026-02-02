@@ -14,6 +14,6 @@ FROM nginx:alpine as produciton-stage
 
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
