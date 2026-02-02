@@ -1,7 +1,7 @@
 steps:
   - name: "gcr.io/kaniko-project/executor:latest"
     args:
-      - "--context=dir://workspace"
+      - "--context=dir:///workspace"
       - "--dockerfile=/workspace/Dockerfile"
       - "--destination=us-central1-docker.pkg.dev/$PROJECT_ID/my-app-repo/nginx-configurator:$SHORT_SHA"
       - "--cache=true"
